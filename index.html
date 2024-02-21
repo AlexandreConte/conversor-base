@@ -9,34 +9,37 @@
 </head>
 
 <body>
-    <div class="cabecalho">
-        <h1 class="titulo">Conversor de base</h1>
-        <h2 class="subtitulo">Selecione as bases, digite um número e clique em calcular</h2>
-    </div>
+    <div id="root">
+        <div class="cabecalho">
+            <h1 class="titulo">Conversor de base</h1>
+            <h2 class="subtitulo">Selecione as bases, digite um número e clique em calcular</h2>
+        </div>
+        <div class="seletores">
+            <div>
+                <label for="base-atual">De: </label>
+                <select id="base-atual" class="entrada">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binário</option>
+                    <option value="16">Hexadecimal</option>
+                    <option value="8">Octal</option>
+                </select>
+            </div>
+            <div>
+                <label for="base-final">Para: </label>
+                <select id="base-final" class="entrada">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binário</option>
+                    <option value="16">Hexadecimal</option>
+                    <option value="8">Octal</option>
+                </select>
+            </div>
+        </div>
+        <input id="numero" class="entrada" placeholder="0">
 
-    <div class="seletores">
-        <label for="base-atual">De: </label>
-        <select id="base-atual" class="entrada">
-            <option value="10">Decimal</option>
-            <option value="2">Binário</option>
-            <option value="16">Hexadecimal</option>
-            <option value="8">Octal</option>
-        </select>
+        <button id="botao">Converter</button>
 
-        <label for="base-final">Para: </label>
-        <select id="base-final" class="saida">
-            <option value="10">Decimal</option>
-            <option value="2">Binário</option>
-            <option value="16">Hexadecimal</option>
-            <option value="8">Octal</option>
-        </select>
-    </div>
-
-    <input id="numero" class="entrada" placeholder="0">
-    <button id="botao">Converter</button>
-
-    <div id="resultado">
-        
+        <div id="resultado" class="invisivel">
+        </div>
     </div>
 
     <script src="script.js"></script>

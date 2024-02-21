@@ -20,4 +20,5 @@ botao.addEventListener("click", () => {
     }
 
     divRes.innerHTML = `${numeroAtual}<sub>${baseAtual}</sub> = ${numeroFinal}<sub>${baseFinal}</sub>`;
+    divRes.classList.remove("invisivel");
 });
