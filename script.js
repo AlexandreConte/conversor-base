@@ -10,14 +10,8 @@ botao.addEventListener("click", () => {
     const baseAtual = +seletorBaseAtual.value;
     const baseFinal = +seletorBaseFinal.value;
 
-    if (baseAtual === baseFinal) {
-        numeroFinal = numeroAtual;
-    } else if (baseAtual === 10) {
-        numeroFinal = numeroAtual.toString(baseFinal);
-    } else {
-        const decimal = parseInt(numeroAtual, baseAtual);
-        numeroFinal = decimal.toString(baseFinal);
-    }
+    const decimal = parseInt(numeroAtual, baseAtual);
+    numeroFinal = decimal.toString(baseFinal);
 
     divRes.innerHTML = `${numeroAtual}<sub>${baseAtual}</sub> = ${numeroFinal}<sub>${baseFinal}</sub>`;
     divRes.classList.remove("invisivel");
